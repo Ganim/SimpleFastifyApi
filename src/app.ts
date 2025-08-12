@@ -1,7 +1,6 @@
-import fastify from "fastify"
-import { healthCheck } from "./http/check-health"
+import fastify from 'fastify';
+import { healthCheck } from './http/check-health';
 
-export const app = fastify()
+export const app = fastify();
 
-app.get('/health', healthCheck)
-
+app.get('/health', healthCheck);
