@@ -1,7 +1,7 @@
 {
-  "name": "firebase-auth-api",
+  "name": "simple-fastify-api",
   "version": "1.0.0",
-  "description": "A Firebase Authentication API",
+  "description": "A Simple fastify API",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -13,9 +13,8 @@
     "lint:fix": "eslint --fix"
   },
   "keywords": [
-    "firebase",
-    "auth",
-    "api"
+    "api",
+    "fastify"
   ],
   "author": "Guilherme Ganim",
   "license": "ISC",
