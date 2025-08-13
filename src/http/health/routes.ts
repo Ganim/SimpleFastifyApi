@@ -8,17 +8,17 @@ export function healthRoutes() {
       schema: {
         tags: ['Health'],
         summary: 'Check the health of the API',
-        description: 'Retorna status OK se a API estiver funcionando.',
+        description: 'Returns OK status if the API is working.',
         response: {
           200: {
-            description: 'Status da API',
+            description: 'API status',
             type: 'object',
             properties: {
               status: { type: 'string', example: 'OK' },
             },
           },
           500: {
-            description: 'Erro interno do servidor',
+            description: 'Internal server error',
             type: 'object',
             properties: {
               error: { type: 'string', example: 'Internal Server Error' },
