@@ -23,24 +23,61 @@ Fornecer uma estrutura mínima porém extensível para acelerar o desenvolviment
 ## Estrutura de Pastas
 ```
 .
-├── .env               # Variáveis de ambiente (não versionar em produção)
-├── .env.example       # Exemplo base de variáveis
+├── .env
+├── .env.example
 ├── package.json
 ├── tsconfig.json
+├── pnpm-workspace.yaml
+├── eslint.config.mjs
+├── README.md
 ├── src
-│   ├── app.ts         # Instância e configuração principal do Fastify
-│   ├── server.ts      # Bootstrap do servidor (listen)
-│   ├── env/           # Validação de variáveis de ambiente (Zod)
+│   ├── app.ts
+│   ├── server.ts
+│   ├── @env/
 │   │   └── index.ts
-│   ├── http
-│   │   ├── error-handler.ts  # Tratamento central de erros
-│   │   └── health
-│   │       ├── routes.ts     # Registro das rotas de health
-│   │       └── check-health.ts
-│   └── use-cases
-│       └── @errors
-│           └── bad-request-error.ts
-└── README.md
+│   ├── @errors/
+│   │   ├── error-handler.ts
+│   │   └── use-cases/
+│   │       ├── bad-request-error.ts
+│   │       ├── forbidden-error.ts
+│   │       ├── resource-not-found.ts
+│   │       └── unauthorized-error.ts
+│   ├── @types/
+│   │   └── put-your-types-here.ts
+│   ├── config/
+│   │   └── put-your-configs-here.ts
+│   ├── entities/
+│   │   ├── business/
+│   │   │   ├── entitie-example.ts
+│   │   │   └── value-objects/
+│   │   │       └── value-object-example.ts
+│   │   └── domain/
+│   │       ├── entities.ts
+│   │       ├── optional.ts
+│   │       └── unique-entity-id.ts
+│   ├── http/
+│   │   ├── controllers/
+│   │   │   ├── health/
+│   │   │   │   ├── health-check.controller.ts
+│   │   │   │   └── routes.ts
+│   │   │   └── put-your-business-controllers-here.ts
+│   │   ├── middlewares/
+│   │   │   └── put-your-middlewares-here.ts
+│   ├── lib/
+│   │   └── put-your-libs-here.ts
+│   ├── mappers/
+│   │   └── put-your-mappers-here.ts
+│   ├── repositories/
+│   │   ├── in-memory-repository/
+│   │   │   └── put-your-in-memory-repository-here.ts
+│   │   └── put-your-contracts-here.ts
+│   ├── use-cases/
+│   │   ├── example/
+│   │   │   ├── factories/
+│   │   │   │   └── make-use-case-example.ts
+│   │   │   └── use-case-example.ts
+│   ├── utils/
+│   │   └── put-your-utils-here.ts
 ```
 
 ## Endpoints Atuais

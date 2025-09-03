@@ -17,6 +17,12 @@ importers:
       fastify:
         specifier: ^5.5.0
         version: 5.5.0
+      fastify-type-provider-zod:
+        specifier: 5.0.3
+        version: 5.0.3(@fastify/swagger@9.5.1)(fastify@5.5.0)(openapi-types@12.1.3)(zod@4.0.17)
+      swagger-themes:
+        specifier: 1.4.3
+        version: 1.4.3
       tsup:
         specifier: ^8.5.0
         version: 8.5.0(tsx@4.20.3)(typescript@5.9.2)(yaml@2.8.1)
@@ -786,6 +792,14 @@ packages:
   fastify-plugin@5.0.1:
     resolution: {integrity: sha512-HCxs+YnRaWzCl+cWRYFnHmeRFyR5GVnJTAaCJQiYzQSDwK9MgJdyAsuL3nh0EWRCYMgQ5MeziymvmAhUHYHDUQ==}
 
+  fastify-type-provider-zod@5.0.3:
+    resolution: {integrity: sha512-h+/SL9qWD+J5OS4UZ86YnbQA/gaeTqKXqUDbYFm3NZYAhjVVqALCp/UBHFXnH/lv+TpBFyv8uKQ/U1692j0N1g==}
+    peerDependencies:
+      '@fastify/swagger': '>=9.5.1'
+      fastify: ^5.0.0
+      openapi-types: ^12.1.3
+      zod: '>=3.25.67'
+
   fastify@5.5.0:
     resolution: {integrity: sha512-ZWSWlzj3K/DcULCnCjEiC2zn2FBPdlZsSA/pnPa/dbUfLvxkD/Nqmb0XXMXLrWkeM4uQPUvjdJpwtXmTfriXqw==}
 
@@ -1277,6 +1291,9 @@ packages:
   supports-color@7.2.0:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
     engines: {node: '>=8'}
+
+  swagger-themes@1.4.3:
+    resolution: {integrity: sha512-1G0CqJC1IBbNxkAOyJoREd9hfwXH1R6+3GOFxLhQho2w2i+AbaJqkF4mTJhkce4yhaEMUXvv4KKu1YO/qpe6nQ==}
 
   synckit@0.11.11:
     resolution: {integrity: sha512-MeQTA1r0litLUf0Rp/iisCaL8761lKAZHaimlbGK4j0HysC4PLfqygQj9srcs0m2RdtDYnF8UuYyKpbjHYp7Jw==}
@@ -2094,6 +2111,14 @@ snapshots:
 
   fastify-plugin@5.0.1: {}
 
+  fastify-type-provider-zod@5.0.3(@fastify/swagger@9.5.1)(fastify@5.5.0)(openapi-types@12.1.3)(zod@4.0.17):
+    dependencies:
+      '@fastify/error': 4.2.0
+      '@fastify/swagger': 9.5.1
+      fastify: 5.5.0
+      openapi-types: 12.1.3
+      zod: 4.0.17
+
   fastify@5.5.0:
     dependencies:
       '@fastify/ajv-compiler': 4.0.2
@@ -2569,6 +2594,8 @@ snapshots:
   supports-color@7.2.0:
     dependencies:
       has-flag: 4.0.0
+
+  swagger-themes@1.4.3: {}
 
   synckit@0.11.11:
     dependencies:
